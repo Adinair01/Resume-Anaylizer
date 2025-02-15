@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1e1e1e;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            color: #ffcc00;
+        }
+        .progress-card, .info-card {
+            background: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .profile-section {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 0 15px #ffcc00;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        th, td {
+            border: 2px solid #ffcc00;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffcc00;
+            color: #000;
+        }
+        .form-section input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid red;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+            transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+        .form-section input:hover, .form-section input:focus {
+            background-color: #444;
+            outline: none;
+        }
+        .form-section input:valid {
+            border: 2px solid limegreen;
+            box-shadow: 0 0 10px limegreen;
+        }
+        tr:nth-child(odd) {
+            background-color: #222;
+        }
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+        .job-hunt-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px #ffcc00;
+        }
+        .job-hunt-btn:hover {
+            background-color: #ffdb4d;
+            box-shadow: 0 0 15px #ffdb4d;
+            transform: scale(1.05);
+        }
+        .black-box {
+            width: 60%;
+            height: 150px;
+            background-color: black;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 0 15px #ffcc00;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <div class="progress-card">Profile Completion: 65%</div>
+            <div class="info-card">Skills: 8</div>
+            <div class="info-card">Education: 2</div>
+            <div class="info-card">Interests: 5</div>
+        </aside>
+        <main class="profile-section">
+            <h1>Career Hub - User Profile</h1>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Details</th>
+                </tr>
+                <tr class="form-section">
+                    <td>Skills</td>
+                    <td><input type="text" placeholder="Enter your skills" required></td>
+                </tr>
+                <tr class="form-section">
+                    <td>Skills Category</td>
+                    <td><input type="text" placeholder="Enter skill category" required></td>
+                </tr>
+                <tr class="form-section">
+                    <td>Skill Type</td>
+                    <td><input type="text" placeholder="Enter skill type" required></td>
+                </tr>
+                <tr class="form-section">
+                    <td>Experience</td>
+                    <td><input type="text" placeholder="Enter experience level" required></td>
+                </tr>
+                <tr class="form-section">
+                    <td>Education</td>
+                    <td><input type="text" placeholder="Enter your education" required></td>
+                </tr>
+                <tr class="form-section">
+                    <td>Interests and Hobbies</td>
+                    <td><input type="text" placeholder="Enter your hobbies" required></td>
+                </tr>
+                <tr class="form-section">
+                    <td>Certifications</td>
+                    <td><input type="text" placeholder="Enter your certifications" required></td>
+                </tr>
+            </table>
+            <button class="job-hunt-btn">Let's Hunt the Job</button>
+            <div class="black-box">Your Custom Content Here</div>
+            <button class="job-hunt-btn">Job Hunt Over</button>
+        </main>
+    </div>
+</body>
+</html>
